@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        * {
+            /* margin: 0; */
+            padding: 0;
+
+        }
+
+        .monitor{
+            border: 2px solid;
+            width: 800px;
+            height: 400px;
+            padding-left: 50px;
+        }
+        
+        .box{
+            display: block;
+            width: 750px;
+            height: 30px;
+        }
+
+        .delbtn{
+            float: right;
+        }
+        .function,.info{
+            
+            display: inline;
+
+        }
+        #querydiv{
+            display: none;
+            position: absolute;
+            left: 870px;
+            border: 2px solid;
+            width: 550px;
+            padding-left: 20px;
+            padding-right: 20px;
+            height: 420px;
+        }
+        .querydiv input{
+            width: 30px;
+        }
+        .queryinfo{
+            display: flex;
+            align-items: baseline;
+            border-bottom: 2px solid;
+        }
+        .close{
+            margin-left: 200px;
+        }
+        .search{
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>用户管理系统</h1>
+    <p>操作面板</p>
+    <form class="info">
+        <!-- <label for="">id：</label> -->
+        <label for="" >id:</label>
+        <input type="number" id="studentid" autocomplete="off" name="id">
+        <label for="" >姓名:</label>
+        <input type="text" id="studentname" autocomplete="off" name="uname">
+        <label for="">年龄:</label>
+        <input type="number" id="studentage" autocomplete="off" name="age">
+        <label for="">性别:</label>
+        <select name="性别" id="studentsex" name="sex">
+            <option value="男">男</option>
+            <option value="女">女</option>
+            <option value="保密">保密</option>
+        </select><button>添加</button>
+    
+    </form>
+    <div id="querydiv" class="querydiv">
+        <div class="wrap">
+        <h1>搜索</h1>
+        <form class="queryinfo">
+        <p>id:</p>
+        <input type="text" id="queryid">
+        <p>名字:</p>
+        <input type="text" id="queryuname">
+        <p>年龄:</p>
+        <input type="text" id="queryage">
+        <p>性别:</p>
+        <input type="text" id="querysex">
+        <button class="search">给我搜</button>
+        <button class="close">关闭</button>
+        
+        </form>
+        
+    </div>
+    <div class="result"></div>
+</div>
+    <div class="function">
+    <button id="query">搜索</button>
+        <button id="modify">修改</button>
+        <button onclick="allDel()">重置</button></div>
+    <p>显示面板</p>
+    <div class="monitor"></div>
+    
+<script src="index.js" ></script>
+</body>
+</html>
